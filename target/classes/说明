@@ -1,0 +1,25 @@
+
+	用管理员登录：admin/admin
+	后台地址：http://localhost:8080/shop_test/backLogin.jsp
+	前台地址：http://localhost:8080/shop_test/home.jsp
+	用maven启动就不用加项目名
+	原项目我放在服务器上面
+	后台地址：http://www.fision.cn/shop_test/backLogin.jsp
+	前台地址：http://www.fision.cn/shop_test/home.jsp
+答辩项目
+	1)把商城改成用SSM实现
+		a)前端分页插件
+		b)Mybatis分页插件         ----使用pagehelper   返回时list返回PageInfo<T> 不推荐直接返回ArrayList
+	2)答辩时间周天
+	
+	分工 - 完成时间星期六12点之前，然后讨论其他内容   使用git，多pull早push
+	  1、按类分工  根据qf包内代码需要编写接口
+		User 何
+		Address 尹
+		GoodsInfo 吴
+		GoodType 李
+		OrderDetail 陈
+		Order 陈
+	  2、完成各自接口的时候写一个测试一个，测试通过及时修改jsp页面的接口调用
+	   静态资源访问不知道配的对不对，如果不正确，自己在spring-mvc中重新配一下
+	   3、改完接口再讨论

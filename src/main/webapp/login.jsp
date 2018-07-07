@@ -40,7 +40,7 @@
 				<div class="clear"></div>
 
 				<div class="login-form">
-					<form action="userServlet?method=Frontlogin" method="post" id ="login_from">
+					<form action="/user/frontLogin" method="post" id ="login_from">
 						<div class="user-name">
 							<label for="user"><i class="am-icon-user"></i></label> <input
 								type="text" name="name" id="userName" placeholder="邮箱/手机/用户名">

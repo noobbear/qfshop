@@ -138,5 +138,7 @@
 		<include refid="Base_Column_List" />
 		from t_user
 	</select>
-
+	<select id="login" resultMap="BaseResultMap">
+	    select * from t_user where name = #{name} and password = #{password}
+	</select>
 </mapper>

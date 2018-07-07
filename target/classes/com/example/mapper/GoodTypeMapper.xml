@@ -111,4 +111,7 @@
       pic = #{pic,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="queryAll" resultMap="BaseResultMap">
+      select * from t_goods_type
+  </select>
 </mapper>

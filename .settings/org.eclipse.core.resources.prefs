@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
+encoding//src/main/java/com/example/util/KeyOpetion.java=GBK
 encoding//src/main/java/com/qf/shop/servlet/GoodsInfoServlet.java=GBK
+encoding//src/main/java/com/qf/shop/servlet/KeyOpetion.java=GBK
+encoding//src/main/java/com/qf/shop/servlet/UserServlet.java=UTF-8
 encoding//src/main/resources/db.properties=UTF-8
 encoding//src/main/resources/log4j.properties=UTF-8

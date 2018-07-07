@@ -1,59 +1,55 @@
 package com.example.vo;
 
-import java.math.BigDecimal;
-
 public class GoodsInfo {
 	private int id;
-	private String goods_name;
-	private String goods_description; //商品描述
-	private String goods_pic; 
-	private double goods_price; // 商品价格
-	private int goods_parentid;//所属大类
-	private int goods_fatherid;//所属小类
+	private String goodsName;
+	private String goodsDescription; //商品描述
+	private String goodsPic; 
+	private double goodsPrice; // 商品价格
+	private int goodsParentid;//所属大类
+	private int goodsFatherid;//所属小类
 	private int count;//临时变量，方便计算价格
-	
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getGoods_name() {
-		return goods_name;
+	public String getGoodsName() {
+		return goodsName;
 	}
-	public void setGoods_name(String goods_name) {
-		this.goods_name = goods_name;
+	public void setGoodsName(String goodsName) {
+		this.goodsName = goodsName;
 	}
-	public String getGoods_description() {
-		return goods_description;
+	public String getGoodsDescription() {
+		return goodsDescription;
 	}
-	public void setGoods_description(String goods_description) {
-		this.goods_description = goods_description;
+	public void setGoodsDescription(String goodsDescription) {
+		this.goodsDescription = goodsDescription;
 	}
-	public String getGoods_pic() {
-		return goods_pic;
+	public String getGoodsPic() {
+		return goodsPic;
 	}
-	public void setGoods_pic(String goods_pic) {
-		this.goods_pic = goods_pic;
+	public void setGoodsPic(String goodsPic) {
+		this.goodsPic = goodsPic;
 	}
-	public double getGoods_price() {
-		return goods_price;
+	public double getGoodsPrice() {
+		return goodsPrice;
 	}
-	public void setGoods_price(double goods_price) {
-		this.goods_price = goods_price;
+	public void setGoodsPrice(double goodsPrice) {
+		this.goodsPrice = goodsPrice;
 	}
-	
-	public int getGoods_parentid() {
-		return goods_parentid;
+	public int getGoodsParentid() {
+		return goodsParentid;
 	}
-	public void setGoods_parentid(int goods_parentid) {
-		this.goods_parentid = goods_parentid;
+	public void setGoodsParentid(int goodsParentid) {
+		this.goodsParentid = goodsParentid;
 	}
-	public int getGoods_fatherid() {
-		return goods_fatherid;
+	public int getGoodsFatherid() {
+		return goodsFatherid;
 	}
-	public void setGoods_fatherid(int goods_fatherid) {
-		this.goods_fatherid = goods_fatherid;
+	public void setGoodsFatherid(int goodsFatherid) {
+		this.goodsFatherid = goodsFatherid;
 	}
 	public int getCount() {
 		return count;
@@ -61,4 +57,6 @@ public class GoodsInfo {
 	public void setCount(int count) {
 		this.count = count;
 	}
+	
+
 }

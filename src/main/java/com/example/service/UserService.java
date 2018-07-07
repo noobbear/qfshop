@@ -10,4 +10,6 @@ public interface UserService {
 	public List<User> queryAll();
 
 	PageInfo<User> queryAll(Integer pageNum, Integer pageSize);
+
+	public User login(User user);
 }

@@ -33,20 +33,20 @@ public class UserServlet extends HttpServlet {
 		String method = req.getParameter("method");
 		System.out.println("UserServlet.doPost() ==== "+method);
 		if("login".equals(method)){
-			System.out.println("µÇÂ¼²Ù×÷");
+			System.out.println("ç™»å½•æ“ä½œ");
 			String username = req.getParameter("name");
 			String password = req.getParameter("password");
 			System.out.println("userName:"+username);
 			System.out.println("password:"+password);
 			User user = userService.login(username, password);
 			if(user == null){
-				resp.getWriter().write("<script>alert('ÓÃ»§²»´æÔÚ');location.href='backLogin.jsp'</script>");;
+				resp.getWriter().write("<script>alert('ç”¨æˆ·ä¸å­˜åœ¨');location.href='backLogin.jsp'</script>");;
 			}else{
-				if("ÊÇ".equals(user.getIsAdmin())){
+				if("æ˜¯".equals(user.getIsAdmin())){
 					req.getSession().setAttribute("sessionUser", user);
 					req.getRequestDispatcher("/back/main.jsp").forward(req, resp);;
 				}else{
-					resp.getWriter().write("<script>alert('sorry,Äã²»ÊÇ¹ÜÀíÔ±');location.href='backLogin.jsp'</script>");;
+					resp.getWriter().write("<script>alert('sorry,ä½ ä¸æ˜¯ç®¡ç†å‘˜');location.href='backLogin.jsp'</script>");;
 				}
 			}
 		}else if("getUserList".equals(method)){
@@ -65,7 +65,7 @@ public class UserServlet extends HttpServlet {
 			if(result > 0){
 				getAllUserList(req, resp);
 			}else{
-				resp.getWriter().write("<script>alert('Ìí¼ÓÓÃ»§Ê§°Ü£¡ÇëÖØĞÂÌîĞ´£¡');location.href='back/user/adduser.jsp'</script>");
+				resp.getWriter().write("<script>alert('æ·»åŠ ç”¨æˆ·å¤±è´¥ï¼è¯·é‡æ–°å¡«å†™ï¼');location.href='back/user/adduser.jsp'</script>");
 			}
 		}else if("findUserById".equals(method)){
 			String userId = req.getParameter("userId");
@@ -99,14 +99,14 @@ public class UserServlet extends HttpServlet {
 			if(result > 0){
 				getAllUserList(req, resp);
 			}else {
-				resp.getWriter().write("<script>alert('É¾³ıÊ§°Ü');location.href='userServlet?method=getUserList'</script>");
+				resp.getWriter().write("<script>alert('åˆ é™¤å¤±è´¥');location.href='userServlet?method=getUserList'</script>");
 			}
 		}else if("Frontlogin".equals(method)){
 			String username = req.getParameter("name");
 			String password = req.getParameter("password");
 			User user = userService.login(username, password);
 			if(user == null){
-				resp.getWriter().write("<script>alert('ÓÃ»§²»´æÔÚ');location.href='login.jsp'</script>");;
+				resp.getWriter().write("<script>alert('ç”¨æˆ·ä¸å­˜åœ¨');location.href='login.jsp'</script>");;
 			}else{
 				req.getSession().setAttribute("sessionUser", user);
 				req.getRequestDispatcher("home.jsp").forward(req, resp);;

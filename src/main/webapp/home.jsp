@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script type="text/javascript">
-		location.href="GoodsInfoServlet?method=queryAll";
+		location.href="/goodsInfo/queryAll";
 	</script>
 </body>
 </html>

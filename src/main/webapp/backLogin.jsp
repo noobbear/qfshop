@@ -49,7 +49,7 @@
     <span class="systemlogo"></span> 
        
     <div class="loginbox">
-    <form action="userServlet?method=login" method="post">  
+    <form action="/user/login" method="post">  
     <ul>
     <li><input name="name" type="text" class="loginuser" /></li>
     <li><input name="password" type="text" class="loginpwd" /></li>

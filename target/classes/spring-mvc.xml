@@ -10,7 +10,7 @@
          http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+	<mvc:annotation-driven />
 
 	<!-- 1.开启包扫描 -->
 	<context:component-scan base-package="com.example.controller" />
@@ -26,7 +26,13 @@
 		<!-- 渲染后视图的后缀 -->
 		<property name="suffix" value=".jsp" />
 	</bean>
-
+	<!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->
+    <bean id="multipartResolver"
+        class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8" />
+        <!-- 指定所上传文件的总大小,单位字节。注意maxUploadSize属性的限制不是针对单个文件，而是所有文件的容量之和 -->
+        <property name="maxUploadSize" value="10240000" />
+    </bean>
 	<!-- 配置静态资源css js location：源文件位置 mapping：调用的url等 -->
 	<mvc:resources location="/AmazeUI-2.4.2/**" mapping="/AmazeUI-2.4.2/"></mvc:resources>
 	<mvc:resources location="/basic/**" mapping="/basic/"></mvc:resources>
